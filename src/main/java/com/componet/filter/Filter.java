@@ -4,11 +4,23 @@ import com.componet.Event;
 
 public interface Filter {
 
-  String execute(Event event);
+    /**
+     * Execute order processing filter.
+     */
+    String execute(Event event);
 
-  void setNext(Filter filter);
+    /**
+     * Set next filter in chain after this.
+     */
+    void setNext(Filter filter);
 
-  Filter getNext();
+    /**
+     * Get next filter in chain after this.
+     */
+    Filter getNext();
 
-  Filter getLast();
+    /**
+     * Get last filter in the chain.
+     */
+    Filter getLast();
 }

@@ -6,7 +6,7 @@ package com.componet;
 public class EventHandler {
 
 
-    public void handle() {
+    public void onEvent(Event event) {
         //1. 发送邮件
 
         //2. 发送短信
