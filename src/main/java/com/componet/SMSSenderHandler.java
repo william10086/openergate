@@ -18,7 +18,7 @@ public class SMSSenderHandler extends SenderHandler {
     private FilterManager filterManager;
 
     @Override
-    public void onEvent(SenderEvent event) {
+    public void send(SenderEvent event) {
         List<User> userList = userContainer.getAvailableUsers();
         Iterator<User> userIterator = userList.iterator();
         while (userIterator.hasNext()) {

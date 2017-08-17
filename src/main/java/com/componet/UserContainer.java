@@ -1,16 +1,22 @@
 package com.componet;
 
+import com.google.common.collect.Lists;
 import org.hsqldb.rights.User;
 
 import java.util.List;
+import java.util.SortedMap;
 
 /**
  * Created by william on 17-8-16.
  */
 public class UserContainer {
-    private List<User> availableUsers;
+    private SortedMap<User, Long> availableUsers = null;
 
     public List<User> getAvailableUsers() {
-        return availableUsers;
+        return Lists.newArrayList(availableUsers.keySet());
+    }
+
+    public User popAvailableUser() {
+        return null;
     }
 }
